@@ -1,0 +1,52 @@
+
+<template name="ex_file_upload">
+  {{> ex_navbar}}
+  <div id="ex_file_upload">
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1>파일 업로드 샘플</h1>
+        <p>
+        <div class="lead text-muted">이미지 파일을 선택 후 문자열과 함께 데이터베이스에 저장 합니다.</div>
+        </p>
+        <div class="input-group mb-3">
+          <input type="file" id="inp-file"/>
+        </div>
+        <div class="input-group mb-3">
+          <textarea id="ta-article" rows="5" type="text" class="form-control" placeholder="Write your story"></textarea>
+        </div>
+
+        <p>
+          <a id="btn-save" href="#" class="btn btn-primary">Add Content</a>
+          <a href="#" class="btn btn-secondary">Secondary action</a>
+        </p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="row">
+        <!--    DB를 파라미터로 전달 받는 반복문     -->
+        {{#each contents}}
+          <div class="col-md-4">
+            <div class="mb-4 shadow-sm">
+              <img src="{{link}}" alt="" class="card-img-top">
+              <button id="btn-remove" type="button" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <div class="card-body">
+                <p class="card-text">{{{content}}}</p>  <!-- {{{...}}} 형식은 해당 값을 html 구문을 적용하여 화면에 표시합니다. -->
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">{{createdAt}}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+  {{> ex_footer}}
+</template>

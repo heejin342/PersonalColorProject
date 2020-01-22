@@ -1,0 +1,100 @@
+<template name="main">
+  <div id="main" class="text-center">
+
+    {{> header}}
+
+      <div id="info1">
+        <h1 style="margin-top: 10%;">퍼스널 컬러란?</h1>
+        <h5>What is the personal color?</h5>
+          <br>
+          <div id="info1_1">
+              <img src = "examples/pic1.png" alt ="pic1" width="550px" height="450px">
+
+              퍼스널컬러란
+          </div>
+      </div>
+
+      <div id="info2">
+          <h1 style="margin-top: 10%;">퍼스널 컬러 종류</h1>
+          <h5>8type of personal color</h5>
+
+
+          <h6><p></p><p></p><p></p>퍼스널 컬러의 종류는 8가지로 봄 라이트 / 봄 브라이트 / 여름 라이트 / 여름 뮤트 / 가을 딥 / 가을 뮤트 / 겨울 클리어 / 겨울 브라이트가 있습니다.</h6>
+      </div>
+
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img src="" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                  <img src="..." class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                  <img src="..." class="d-block w-100" alt="...">
+              </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+          </a>
+      </div>
+
+
+
+  </div>
+</template>
+
+<template name="header">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h3 class="masthead-brand"><a href="/">Codeasy</a></h3>
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link" href="https://github.com/codeasy-org/codeasy">About</a>
+        <a class="nav-link" href="https://github.com/codeasy-org/codeasy/wiki">Wiki</a>
+          <a class="nav-link" href="/newpage">newpage</a>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">UI</a>
+          <div class="dropdown-menu text-center">
+            <small>HTML/CSS Templates</small>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/ex_album">Album</a>
+            <a class="dropdown-item" href="/ex_blog">Blog</a>
+            <a class="dropdown-item" href="/ex_carousel">Carousel</a>
+            <a class="dropdown-item" href="/ex_checkout">Checkout</a>
+            <a class="dropdown-item" href="/ex_history">History</a>
+            <a class="dropdown-item" href="/ex_pricing">Pricing</a>
+            <a class="dropdown-item" href="/ex_product">Product</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">DATA</a>
+          <div class="dropdown-menu text-center">
+            <small>Client Side</small>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/ex_login_navbar">Login(Simple)</a>
+            <a class="dropdown-item" href="/ex_login_custom">Login(Custom)</a>
+            <a class="dropdown-item" href="/ex_posts">Posts</a>
+            <a class="dropdown-item" href="/ex_file_upload">File Upload</a>
+            <a class="dropdown-item" href="/ex_dashboard">Dashboard</a>
+            <div class="dropdown-divider"></div>
+            <small>Server Side</small>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/ex_meteor_methods">Server-API</a>
+            <a class="dropdown-item" href="/ex_http_methods">RESTful-API</a>
+          </div>
+        </li>
+      </nav>
+    </div>
+  </header>
+</template>

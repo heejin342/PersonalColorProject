@@ -1,0 +1,21 @@
+<template name = "newpage2">
+
+    <div id="main" class="text-center">
+        {{>header}}
+
+        <input id = "inp-keyword" type = "text">
+        <button id = "btn-save">키워드저장 </button>
+
+
+        <ul>
+            {{#each keywords}}
+
+                <li>{{this}}</li>
+
+            {{/each}}
+        </ul>
+    </div>
+
+
+
+</template>

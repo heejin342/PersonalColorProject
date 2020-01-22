@@ -1,0 +1,80 @@
+<template name="ex_login_navbar">
+  <div id="ex_login_navbar">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark text-right">
+      <a href="/"><img src="/examples/logo.png" alt="" class="nav-logo" style="max-height: 40px;"></a>
+      <a href="/" class="navbar-brand">Codeasy</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/codeasy">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-primary" href="#">{{> loginButtons align="right"}}</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="jumbotron text-center">
+      {{#if currentUser}}
+        <div class="container">
+          {{#with userInfo}}
+            <p><h1>{{emails.[0].address}}</h1></p>
+            <p><h4>loginButtons 템플릿 버튼만 적용하면 즉시 로그인 기능이 사용 가능 합니다.</h4></p>
+            <p>아래 정보를 입력 하면 현재 로그인 된 사용자의 정보를 DB에 추가/수정합니다.</p>
+            <div class="row">
+              <div class="col-lg-3 col-md-2 col-sm-1"></div>
+              <div class="col-lg-6 col-md-8 col-sm-10">
+                <div class="input-group mb-1">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Username</span>
+                  </div>
+                  <input id="inp-name" type="text" class="form-control" placeholder="ex> John Doe" value="{{username}}">
+                </div>
+                <div class="input-group mb-1">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Address</span>
+                  </div>
+                  <input id="inp-address" type="text" class="form-control" placeholder="ex> 123 Street, Seoul, Korea" value="{{profile.address}}">
+                </div>
+                <div class="input-group mb-1">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Phone</span>
+                  </div>
+                  <input id="inp-mobile" type="text" class="form-control" placeholder="ex> 010-1234-5678" value="{{profile.mobile}}">
+                </div>
+                <button id="btn-update-profile" class="btn btn-primary btn-lg btn-block">Update Profile</button>
+              </div>
+              <div class="col-lg-3 col-md-2 col-sm-1"></div>
+
+            </div>
+          {{/with}}
+        </div>
+      {{else}}
+        <p><h3>우측 상단의 Sign in 버튼을 통해 회원 가입 / 로그인 / 로그아웃이 가능합니다.</h3></p>
+        <p>로그인 후 프로파일 변경을 할 수 있습니다.</p>
+      {{/if}}
+    </section>
+  </div>
+</template>

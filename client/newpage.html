@@ -1,0 +1,22 @@
+<template name = "newpage">
+    <div id="main" class="text-center">
+    {{>header}}
+
+        <input id = "inp-major" type = "text">
+        <button id = "btn-save">전공명저장 </button>
+
+
+        <ul>
+            {{#each datas}}
+
+                <li><a href="/newpage2/{{_id}}">{{name}}</a></li>
+
+            {{/each}}
+        </ul>
+    </div>
+
+    <!--1.인풋박스 1개와 저장 버튼-->
+    <!--2. 저된 전공 테이블에 한줄씩 표시-->
+</template>
+
+

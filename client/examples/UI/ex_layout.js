@@ -1,0 +1,1 @@
+FlowRouter.template('/ex_layout', 'ex_layout');
